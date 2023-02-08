@@ -7,14 +7,18 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var email = ""
     @State private var password = ""
-   
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
 
     
     var body: some View {
+        NavigationView{
+            
+        
         VStack(spacing: 30) {
             Text("Welcome!")
                 .foregroundColor(.black)
@@ -45,7 +49,7 @@ struct ContentView: View {
                 .frame(width: 300, height: 1)
             
             Button {
-                
+
             } label: {
                 Text("Sign In")
                     .bold()
@@ -58,23 +62,16 @@ struct ContentView: View {
                     )
             }
             .offset(y:70)
-            
-          
-            Button {
-                
-            } label: {
-                Text("Sign Up")
-                    .bold()
-                    .foregroundColor(.yellow)
-                    .frame(width: 270, height: 48)
-                            
+        
+            NavigationLink(destination: FirstscreenView()){
+                Text("sign up")
             }
-            .offset(x:111,y:245)
+            .offset(x:100,y:230)
             
             Text("Dont have an account?")
                 .foregroundColor(.black)
                 .font(.system(size: 17, weight: .bold, design: .rounded))
-                .offset(x:-45,y:180)
+                .offset(x:-35,y:180)
             
             
           
@@ -84,12 +81,17 @@ struct ContentView: View {
         
         
     }
+        .foregroundColor(.yellow)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+ }
 }
 extension View {
     func placeholder<Content: View>(
@@ -101,4 +103,5 @@ alignment: Alignment = .leading,
                 self
             }
         }
-}
+  }
+
