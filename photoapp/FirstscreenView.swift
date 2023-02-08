@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import FirebaseAuth
 
 
 struct FirstscreenView: View {
@@ -24,8 +24,7 @@ struct FirstscreenView: View {
                     .foregroundColor(.black)
                     .font(.system(size: 40, weight: .bold, design: .rounded))
                     .offset(y:-50)
-                
-                
+
                 TextField("Email", text: $email)
                     .foregroundColor(.gray)
                     .textFieldStyle(.plain)
@@ -49,7 +48,7 @@ struct FirstscreenView: View {
                     .frame(width: 300, height: 1)
                 
                 Button {
-
+                register()
                     
                 } label: {
                     Text("Sign Up")
@@ -63,6 +62,7 @@ struct FirstscreenView: View {
                         )
                 }
                 .offset(y:75)
+                
                 
                 NavigationLink(destination: ContentView()){
                     Text("Sign In")
@@ -88,13 +88,24 @@ struct FirstscreenView: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
     }
+    func register() {
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in if error != nil {
+            print(error!.localizedDescription)
+          }
+        }
+    }
+
 }
+
 struct FirstscreenView_Previews: PreviewProvider {
     static var previews: some View {
         FirstscreenView()
         
+        
     }
 }
+
+
 extension View {
     func Placeholder<Content: View>(
         when shouldShow: Bool,

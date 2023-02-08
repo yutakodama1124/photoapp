@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 
 struct ContentView: View {
@@ -49,7 +50,7 @@ struct ContentView: View {
                 .frame(width: 300, height: 1)
             
             Button {
-
+login()
             } label: {
                 Text("Sign In")
                     .bold()
@@ -86,13 +87,19 @@ struct ContentView: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
 }
-
+    func login() {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in if error != nil {
+            print(error!.localizedDescription)
+          }
+        }
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
  }
-}
+
 extension View {
     func placeholder<Content: View>(
         when shouldShow: Bool,

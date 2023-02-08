@@ -24,7 +24,7 @@ struct photoappApp: App {
 
     var body: some Scene {
         WindowGroup {
-            FirstscreenView()
+            ContentView()
         }
     }
 }
