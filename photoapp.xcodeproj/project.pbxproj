@@ -38,6 +38,7 @@
 		A685FBAA29814508004F853B /* FirebaseCoreInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A685FB8F29814508004F853B /* FirebaseCoreInternal.xcframework */; };
 		A685FBAC29814508004F853B /* gRPC-C++.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A685FB9029814508004F853B /* gRPC-C++.xcframework */; };
 		A685FBAE29814508004F853B /* FirebaseCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A685FB9129814508004F853B /* FirebaseCore.xcframework */; };
+		A6BA4470299CEBD100CF4F4B /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA446F299CEBD100CF4F4B /* LoggedInView.swift */; };
 		A6BE41192993AD13006D0808 /* FireBaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BE41182993AD13006D0808 /* FireBaseAuth.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		A685FB8F29814508004F853B /* FirebaseCoreInternal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseCoreInternal.xcframework; path = Carthage/Build/FirebaseCoreInternal.xcframework; sourceTree = "<group>"; };
 		A685FB9029814508004F853B /* gRPC-C++.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "gRPC-C++.xcframework"; path = "Carthage/Build/gRPC-C++.xcframework"; sourceTree = "<group>"; };
 		A685FB9129814508004F853B /* FirebaseCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseCore.xcframework; path = Carthage/Build/FirebaseCore.xcframework; sourceTree = "<group>"; };
+		A6BA446F299CEBD100CF4F4B /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		A6BE41182993AD13006D0808 /* FireBaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,10 +135,11 @@
 		A607A533292E1C5E00EFC1D6 /* photoapp */ = {
 			isa = PBXGroup;
 			children = (
-				A607A534292E1C5E00EFC1D6 /* photoappApp.swift */,
+				A6BA446F299CEBD100CF4F4B /* LoggedInView.swift */,
 				A6BE41182993AD13006D0808 /* FireBaseAuth.swift */,
 				A607A536292E1C5E00EFC1D6 /* ContentView.swift */,
 				A633FF5B296EBDBC0005F778 /* FirstscreenView.swift */,
+				A607A534292E1C5E00EFC1D6 /* photoappApp.swift */,
 				A67BB77B2993B400002BB96C /* GoogleService-Info.plist */,
 				A607A538292E1C6000EFC1D6 /* Assets.xcassets */,
 				A607A53A292E1C6000EFC1D6 /* Preview Content */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6BA4470299CEBD100CF4F4B /* LoggedInView.swift in Sources */,
 				A6BE41192993AD13006D0808 /* FireBaseAuth.swift in Sources */,
 				A607A537292E1C5E00EFC1D6 /* ContentView.swift in Sources */,
 				A633FF5C296EBDBC0005F778 /* FirstscreenView.swift in Sources */,

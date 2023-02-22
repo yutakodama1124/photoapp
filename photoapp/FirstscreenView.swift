@@ -36,6 +36,8 @@ struct FirstscreenView: View {
                 Rectangle()
                     .frame(width: 300, height: 1)
                 
+                
+                
                 SecureField("Password", text: $password)
                     .foregroundColor(.gray)
                     .textFieldStyle(.plain)
